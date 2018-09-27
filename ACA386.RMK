@@ -1,0 +1,25 @@
+//
+//             Fichero RMAKE para obtener ACA386.EXE
+//
+//             GESTION PARA ACADEMIAS v1.00 versión 386
+//             Fco. Javier Pérez Vidal - 1996
+//             fjavierdev@gmail.com
+//
+
+.prg.obj:
+    CLIPPER $* /m /n /w
+
+.obj.exe:
+    BLINKER @aca386
+
+GES000.OBJ : GES000.PRG
+GES003.OBJ : GES003.PRG
+GES031.OBJ : GES031.PRG
+GES032.OBJ : GES032.PRG
+GES033.OBJ : GES033.PRG
+GES999.OBJ : GES999.PRG
+
+GVC386.EXE : GES000.OBJ \
+             GES003.OBJ \
+             GES031.OBJ GES032.OBJ GES033.OBJ \
+             GES999.OBJ
